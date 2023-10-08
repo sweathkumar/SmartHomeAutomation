@@ -15,21 +15,7 @@ public class Device {
     private String name;
     private String type;
 
-    // Constructors
-
-    public Device() {
-        // Default constructor
-    }
-
-    // Getters and Setters
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    // Constructors, other properties/methods
 
     public String getName() {
         return name;
