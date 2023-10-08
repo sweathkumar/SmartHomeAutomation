@@ -8,6 +8,6 @@ public class SmartHomeAutomationApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SmartHomeAutomationApplication.class, args);
-	}
 
+	}
 }
