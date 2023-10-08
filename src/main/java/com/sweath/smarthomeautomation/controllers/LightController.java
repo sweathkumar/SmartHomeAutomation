@@ -1,17 +1,19 @@
 // LightController.java
 package com.sweath.smarthomeautomation.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 import com.sweath.smarthomeautomation.entities.LightDevice;
 import com.sweath.smarthomeautomation.repositories.LightDeviceRepository;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/lights")
 public class LightController {
 
-    @Autowired
-    private LightDeviceRepository lightDeviceRepository;
+    private final LightDeviceRepository lightDeviceRepository;
+
+    public LightController(LightDeviceRepository lightDeviceRepository) {
+        this.lightDeviceRepository = lightDeviceRepository;
+    }
 
     @GetMapping("/{id}")
     public LightDevice getLightDeviceById(@PathVariable Long id) {
