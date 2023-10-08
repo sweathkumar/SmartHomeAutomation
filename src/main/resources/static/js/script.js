@@ -1,58 +1,94 @@
 // Sample data (replace with your actual devices)
-const devices = [
-    { name: "Living Room Light", status: "On", description: "This is a smart light for the living room." },
-    { name: "Thermostat", status: "72°F", description: "Smart thermostat for controlling the temperature." },
-    { name: "Kitchen Lights", status: "Off", description: "Smart lights for the kitchen area." },
-    { name: "Smart Lock", status: "Locked", description: "Secure your home with this smart lock." },
-    { name: "Security Cameras", status: "Active", description: "Monitor your home with these security cameras." },
-    // Add more device objects here
-];
+const devices = [];
 
 // Get the devices section element
 const devicesSection = document.querySelector('.devices');
+const deviceForm = document.getElementById('device-form');
 
-// Function to create device cards
+// Function to create a device card
 function createDeviceCard(device) {
-    // Create a new device card element
     const deviceCard = document.createElement('div');
-    deviceCard.classList.add('device-card'); // You can style this class with CSS
+    deviceCard.classList.add('device-card');
 
-    // Create elements for device name and status
+    if (device.status === 'On') {
+        deviceCard.classList.add('on');
+    } else if (device.status === 'Off') {
+        deviceCard.classList.add('off');
+    }
+
     const deviceName = document.createElement('h2');
     deviceName.textContent = device.name;
+
+    const deviceDescription = document.createElement('p');
+    deviceDescription.textContent = `Description: ${device.description}`;
 
     const deviceStatus = document.createElement('p');
     deviceStatus.textContent = `Status: ${device.status}`;
 
-    // Create a "View" button
+    const optionsDiv = document.createElement('div');
+    optionsDiv.classList.add('options');
+
     const viewButton = document.createElement('button');
-    viewButton.textContent = "View";
-    viewButton.classList.add('view-button');
-
-    // Create a div to hold the description (initially hidden)
-    const descriptionDiv = document.createElement('div');
-    descriptionDiv.classList.add('device-description');
-    descriptionDiv.textContent = device.description;
-    descriptionDiv.style.display = "none"; // Initially hidden
-
-    // Event listener to toggle description visibility
+    viewButton.textContent = 'View';
+    viewButton.classList.add('view');
     viewButton.addEventListener('click', () => {
-        if (descriptionDiv.style.display === "none") {
-            descriptionDiv.style.display = "block";
-        } else {
-            descriptionDiv.style.display = "none";
+        const description = deviceCard.querySelector('.device-card-description');
+        description.style.display = description.style.display === 'block' ? 'none' : 'block';
+    });
+
+    const editButton = document.createElement('button');
+    editButton.textContent = 'Edit';
+    editButton.classList.add('edit');
+    editButton.addEventListener('click', () => {
+        const newName = prompt('Enter new device name:', device.name);
+        if (newName !== null) {
+            deviceName.textContent = newName;
         }
     });
 
-    // Append elements to the device card
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.classList.add('delete');
+    deleteButton.addEventListener('click', () => {
+        devicesSection.removeChild(deviceCard);
+    });
+
+    optionsDiv.appendChild(viewButton);
+    optionsDiv.appendChild(editButton);
+    optionsDiv.appendChild(deleteButton);
+
+    const descriptionDiv = document.createElement('div');
+    descriptionDiv.classList.add('device-card-description');
+    descriptionDiv.textContent = `Description: ${device.description}`;
+
     deviceCard.appendChild(deviceName);
+    deviceCard.appendChild(deviceDescription);
     deviceCard.appendChild(deviceStatus);
-    deviceCard.appendChild(viewButton);
+    deviceCard.appendChild(optionsDiv);
     deviceCard.appendChild(descriptionDiv);
 
-    // Append the device card to the devices section
-    devicesSection.appendChild(deviceCard);
+    return deviceCard;
 }
 
-// Iterate through the devices array and create device cards
-devices.forEach(createDeviceCard);
+// Event listener for form submission
+deviceForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const deviceName = document.getElementById('device-name').value;
+    const deviceDescription = document.getElementById('device-description').value;
+    const deviceTag = document.getElementById('device-tag').value;
+    const status = deviceTag.includes('On') ? 'On' : 'Off';
+
+    const newDevice = {
+        name: deviceName,
+        description: deviceDescription,
+        status: status,
+    };
+
+    devices.push(newDevice);
+
+    const deviceCard = createDeviceCard(newDevice);
+    devicesSection.appendChild(deviceCard);
+
+    // Clear form fields
+    deviceForm.reset();
+});
