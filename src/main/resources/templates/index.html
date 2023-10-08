@@ -1,40 +1,31 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Home Dashboard</title>
+    <title>Smartphone Automation System</title>
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-<!-- Title bar -->
 <header>
-    <h1>Smart Home Dashboard</h1>
+    <h1>Smartphone Automation System</h1>
 </header>
-
-<!-- Main content -->
 <main>
-    <!-- Add New Device section -->
-    <section class="add-device">
-        <h2>Add New Device</h2>
+    <section id="device-dashboard">
+        <!-- Device cards will be added here -->
+    </section>
+    <section id="add-device">
+        <h2>Add a new device</h2>
         <form id="device-form">
-            <label for="device-name">Device Name:</label>
-            <input type="text" id="device-name" name="device-name" required>
-            <label for="device-description">Device Description:</label>
-            <input type="text" id="device-description" name="device-description">
-            <label for="device-tag">Device Tag:</label>
-            <input type="text" id="device-tag" name="device-tag">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="tag">Tag:</label>
+            <input type="text" id="tag" name="tag">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
             <button type="submit">Add</button>
         </form>
     </section>
-
-    <!-- Devices section -->
-    <section class="devices">
-        <!-- Device cards will be dynamically added here -->
-    </section>
 </main>
-
-<!-- JavaScript -->
 <script src="/static/js/script.js"></script>
 </body>
 </html>
