@@ -1,8 +1,9 @@
-/* Add your CSS styles here */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
@@ -16,18 +17,105 @@ main {
     padding: 2rem;
 }
 
+/* Add New Device section styles */
+.add-device {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+#device-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    flex-grow: 1;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Devices section styles */
 .devices {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 1rem;
 }
 
+/* Device card styles */
 .device-card {
     width: 30%;
-    background-color: #f5f5f5;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 1rem;
-    margin-bottom: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+}
+
+.device-card:hover {
+    transform: translateY(-5px);
+}
+
+/* View button styles */
+.view-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.view-button:hover {
+    background-color: #555;
+}
+
+/* Device description styles */
+.device-description {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    display: none; /* Initially hidden */
+    font-size: 0.9rem;
+}
+
+/* Animation for device cards on hover */
+@keyframes hoverAnimation {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    75% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* Apply the animation to the device cards */
+.device-card:hover {
+    animation: hoverAnimation 0.5s ease-in-out;
 }
