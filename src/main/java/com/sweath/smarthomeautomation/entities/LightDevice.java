@@ -1,12 +1,20 @@
 // LightDevice.java
 package com.sweath.smarthomeautomation.entities;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
 
 @Entity
 public class LightDevice extends Device {
 
     private int brightness;
 
-    // Constructors, getters, setters, and other properties/methods
+    // Constructors, setters, and other properties/methods
+
+    public int getBrightness() {
+        return brightness;
+    }
+
+    public void setBrightness(int brightness) {
+        this.brightness = brightness;
+    }
 }
