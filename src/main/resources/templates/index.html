@@ -24,7 +24,7 @@
                 <div class="device">
                     <img src="thermostat-icon.png" alt="Thermostat">
                     <p>Living Room Thermostat</p>
-                    <label for="living-room-thermostat"></label><input id="living-room-thermostat" max="30" min="16" type="range" value="20">
+                    <label for="living-room-thermostat"></label><input type="range" min="16" max="30" value="20" id="living-room-thermostat">
                 </div>
             </div>
         </div>
@@ -38,7 +38,17 @@
                 </div>
             </div>
         </div>
-        <!-- Add more rooms as needed -->
+        <!-- Add more rooms and devices as needed -->
+        <div class="room" id="kitchen">
+            <h3>Kitchen</h3>
+            <div class="device-container">
+                <div class="device">
+                    <img src="light-icon.png" alt="Light">
+                    <p>Kitchen Light</p>
+                    <button class="control" id="kitchen-light">Turn On</button>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="add-options">
         <h2>Add Options</h2>
@@ -54,6 +64,7 @@
             <label for="room-select"></label><select id="room-select">
                 <option value="living-room">Living Room</option>
                 <option value="bedroom">Bedroom</option>
+                <option value="kitchen">Kitchen</option>
                 <!-- Add more room options here -->
             </select>
             <button class="add-button" id="add-device-button">Add Device</button>
