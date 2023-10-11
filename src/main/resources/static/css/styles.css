@@ -1,8 +1,12 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset some default styles */
+body, h1, h2, h3, p, button {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
 }
 
 header {
@@ -13,28 +17,34 @@ header {
 }
 
 h1 {
-    margin: 0;
+    font-size: 24px;
 }
 
 main {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 2rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem;
 }
 
 .room {
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 2rem;
     margin: 1rem;
-    max-width: 300px;
+    width: 300px;
     text-align: center;
+    transition: transform 0.3s;
+}
+
+.room:hover {
+    transform: translateY(-10px);
 }
 
 h2 {
     color: #2196F3;
+    font-size: 20px;
 }
 
 .device {
@@ -49,6 +59,7 @@ img {
 p {
     margin: 0.5rem 0;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .control {
@@ -59,4 +70,9 @@ p {
     font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.control:hover {
+    background-color: #1565C0;
 }
