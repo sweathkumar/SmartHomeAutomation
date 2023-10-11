@@ -14,24 +14,33 @@
     <section class="room">
         <h2>Living Room</h2>
         <div class="device">
-            <img src="/templates/light-icon.png" alt="Light">
+            <img src="light-icon.png" alt="Light">
             <p>Light</p>
-            <button class="control">Turn On</button>
+            <button class="control" id="living-room-light">Turn On</button>
         </div>
         <div class="device">
             <img src="/templates/thermostat-icon.png" alt="Thermostat">
             <p>Thermostat</p>
-            <button class="control">Adjust</button>
+            <button class="control" id="living-room-thermostat">Adjust</button>
         </div>
     </section>
     <section class="room">
         <h2>Bedroom</h2>
         <div class="device">
-            <img src="light-icon.png" alt="Light">
+            <img src="/templates/light-icon.png" alt="Light">
             <p>Light</p>
-            <button class="control">Turn Off</button>
+            <button class="control" id="bedroom-light">Turn Off</button>
         </div>
     </section>
+    <section class="add-device">
+        <h2>Add New Device</h2>
+        <form id="device-form">
+            <input type="text" id="device-name" placeholder="Device Name" required>
+            <input type="text" id="device-type" placeholder="Device Type" required>
+            <button class="add-button">Add Device</button>
+        </form>
+    </section>
 </main>
+<script src="/static/js/script.js"></script>
 </body>
 </html>

@@ -76,3 +76,39 @@ p {
 .control:hover {
     background-color: #1565C0;
 }
+
+.add-device {
+    text-align: center;
+    margin: 1rem;
+}
+
+#device-form {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#device-name,
+#device-type {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.add-button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.add-button:hover {
+    background-color: #1565C0;
+}
