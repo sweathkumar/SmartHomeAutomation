@@ -1,457 +1,113 @@
 /* Reset some default styles */
-body, h1, h2, h3, p, button {
-    margin: 0;
-    padding: 0;
-}
+/* ... (you can include any additional CSS reset styles if needed) */
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 header {
-    background-color: #2196F3;
-    color: white;
+    background-color: #003366;
+    color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
 h1 {
+    font-family: 'Georgia', serif;
     font-size: 24px;
 }
 
 main {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 2rem;
+    padding: 2rem;
+}
+
+h2 {
+    font-family: 'Palatino Linotype', serif;
+    font-size: 20px;
+    color: #003366;
+    margin-bottom: 1rem;
 }
 
 .room {
     background-color: #fff;
+    border: 1px solid #ccc;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 2rem;
-    margin: 1rem;
-    width: 300px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.room:hover {
-    transform: translateY(-10px);
-}
-
-h2 {
-    color: #2196F3;
-    font-size: 20px;
+    padding: 1rem;
+    margin-bottom: 2rem;
 }
 
 .device {
-    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
-img {
-    max-width: 60px;
-    height: auto;
+.device img {
+    width: 100px;
+    height: 100px;
 }
 
-p {
-    margin: 0.5rem 0;
-    font-weight: bold;
-    font-size: 16px;
+.device p {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 18px;
+    color: #555;
 }
 
 .control {
-    background-color: #2196F3;
-    color: white;
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
-    padding: 8px 16px;
-    font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
     transition: background-color 0.3s;
 }
 
 .control:hover {
-    background-color: #1565C0;
+    background-color: #005599;
 }
 
-.add-device {
-    text-align: center;
-    margin: 1rem;
+.on {
+    background-color: #4CAF50;
 }
 
-#device-form {
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+.off {
+    background-color: #F44336;
 }
 
-#device-name,
-#device-type {
-    width: 100%;
-    padding: 8px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.add-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+}
+
+.add-room h3,
+.add-device h3 {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    color: #003366;
+    margin: 0.5rem 0;
 }
 
 .add-button {
-    background-color: #2196F3;
-    color: white;
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
-    padding: 8px 16px;
-    font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
     transition: background-color 0.3s;
-    width: 100%;
 }
 
 .add-button:hover {
-    background-color: #1565C0;
-}
-
-/* Reset some default styles */
-/* ... (rest of the CSS remains the same) */
-
-.device-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-input[type="range"] {
-    width: 100%;
-    margin: 5px 0;
-}
-
-.add-device {
-    text-align: center;
-    margin: 1rem;
-}
-
-/* Reset some default styles */
-/* ... (rest of the CSS remains the same) */
-
-.rooms {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.room {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    margin: 1rem;
-    width: 300px;
-    text-align: center;
-}
-
-.room h3 {
-    color: #2196F3;
-    font-size: 20px;
-    margin: 0.5rem 0;
-}
-
-.add-options {
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem;
-}
-
-.add-room,
-.add-device {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 1rem;
-    width: 300px;
-    text-align: center;
-}
-
-.add-room h3,
-.add-device h3 {
-    color: #2196F3;
-    font-size: 20px;
-    margin: 0.5rem 0;
-}
-/* Reset some default styles */
-/* ... (rest of the CSS remains the same) */
-
-.rooms {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.room {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    margin: 1rem;
-    width: 300px;
-    text-align: center;
-}
-
-.room h3 {
-    color: #2196F3;
-    font-size: 20px;
-    margin: 0.5rem 0;
-}
-
-.add-options {
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem;
-}
-
-.add-room,
-.add-device {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 1rem;
-    width: 300px;
-    text-align: center;
-}
-
-.add-room h3,
-.add-device h3 {
-    color: #2196F3;
-    font-size: 20px;
-    margin: 0.5rem 0;
-}
-
-/* Reset some default styles */
-/* ... (rest of the CSS remains the same) */
-
-.rooms {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.room {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    margin: 1rem;
-    width: 300px;
-    text-align: center;
-}
-
-.room h3 {
-    color: #2196F3;
-    font-size: 20px;
-    margin: 0.5rem 0;
-}
-
-.device-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.device {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.control {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 5px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.add-options {
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem;
-}
-
-.add-room,
-.add-device {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 1rem;
-    width: 300px;
-    text-align: center;
-}
-
-.add-room h3,
-.add-device h3 {
-    color: #2196F3;
-    font-size: 20px;
-    margin: 0.5rem 0;
-}
-/* Reset some default styles */
-/* ... (rest of the CSS remains the same) */
-
-.rooms {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.room {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    margin: 1rem;
-    width: 300px;
-    text-align: center;
-}
-
-.room h3 {
-    color: #2196F3;
-    font-size: 20px;
-    margin: 0.5rem 0;
-}
-
-.device-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.device {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.control {
-    width: 100px;
-    padding: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
-    color: white;
-}
-
-.on {
-    background-color: #4CAF50;
-}
-
-.off {
-    background-color: #F44336;
-}
-
-.add-options {
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem;
-}
-
-.add-room,
-.add-device {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 1rem;
-    width: 300px;
-    text-align: center;
-    gap: 1rem;
-}
-
-.add-room h3,
-.add-device h3 {
-    color: #2196F3;
-    font-size: 20px;
-    margin: 0.5rem 0;
-}
-/* Reset some default styles */
-/* ... (rest of the CSS remains the same) */
-
-.rooms {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.room {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    margin: 1rem;
-    width: 300px;
-    text-align: center;
-}
-
-.room h3 {
-    color: #2196F3;
-    font-size: 20px;
-    margin: 0.5rem 0;
-}
-
-.device-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.device {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.control {
-    width: 100px;
-    padding: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    border: none;
-    color: white;
-}
-
-.on {
-    background-color: #4CAF50;
-}
-
-.off {
-    background-color: #F44336;
-}
-
-.add-options {
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem;
-}
-
-.add-room,
-.add-device {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 1rem;
-    width: 300px;
-    text-align: center;
-    gap: 1rem;
-}
-
-.add-room h3,
-.add-device h3 {
-    color: #2196F3;
-    font-size: 20px;
-    margin: 0.5rem 0;
+    background-color: #005599;
 }
