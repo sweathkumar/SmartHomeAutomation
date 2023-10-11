@@ -11,34 +11,53 @@
     <h1>Welcome to Your Smart Home</h1>
 </header>
 <main>
-    <section class="room">
-        <h2>Living Room</h2>
-        <div class="device">
-            <img src="light-icon.png" alt="Light">
-            <p>Light</p>
-            <button class="control" id="living-room-light">Turn On</button>
+    <section class="rooms">
+        <h2>Rooms</h2>
+        <div class="room" id="living-room">
+            <h3>Living Room</h3>
+            <div class="device-container">
+                <div class="device">
+                    <img src="light-icon.png" alt="Light">
+                    <p>Living Room Light</p>
+                    <button class="control" id="living-room-light">Turn On</button>
+                </div>
+                <div class="device">
+                    <img src="thermostat-icon.png" alt="Thermostat">
+                    <p>Living Room Thermostat</p>
+                    <input type="range" min="16" max="30" value="20" id="living-room-thermostat">
+                </div>
+            </div>
         </div>
-        <div class="device">
-            <img src="/templates/thermostat-icon.png" alt="Thermostat">
-            <p>Thermostat</p>
-            <button class="control" id="living-room-thermostat">Adjust</button>
+        <div class="room" id="bedroom">
+            <h3>Bedroom</h3>
+            <div class="device-container">
+                <div class="device">
+                    <img src="light-icon.png" alt="Light">
+                    <p>Bedroom Light</p>
+                    <button class="control" id="bedroom-light">Turn Off</button>
+                </div>
+            </div>
         </div>
+        <!-- Add more rooms and devices as needed -->
     </section>
-    <section class="room">
-        <h2>Bedroom</h2>
-        <div class="device">
-            <img src="/templates/light-icon.png" alt="Light">
-            <p>Light</p>
-            <button class="control" id="bedroom-light">Turn Off</button>
+    <section class="add-options">
+        <h2>Add Options</h2>
+        <div class="add-room">
+            <h3>Add Room</h3>
+            <input type="text" id="room-name" placeholder="Room Name" required>
+            <button class="add-button" id="add-room-button">Add Room</button>
         </div>
-    </section>
-    <section class="add-device">
-        <h2>Add New Device</h2>
-        <form id="device-form">
+        <div class="add-device">
+            <h3>Add Device</h3>
             <input type="text" id="device-name" placeholder="Device Name" required>
             <input type="text" id="device-type" placeholder="Device Type" required>
-            <button class="add-button">Add Device</button>
-        </form>
+            <select id="room-select">
+                <option value="living-room">Living Room</option>
+                <option value="bedroom">Bedroom</option>
+                <!-- Add more room options here -->
+            </select>
+            <button class="add-button" id="add-device-button">Add Device</button>
+        </div>
     </section>
 </main>
 <script src="/static/js/script.js"></script>
