@@ -1,8 +1,7 @@
-// Add functionality to toggle device buttons
+// Add functionality to toggle device button colors
 document.querySelectorAll('.control').forEach(button => {
     button.addEventListener('click', function () {
-        const newLabel = this.textContent === 'Turn On' ? 'Turn Off' : 'Turn On';
-        this.textContent = newLabel;
+        this.classList.toggle('on');
     });
 });
 
@@ -41,7 +40,7 @@ function addNewDevice(roomId, name, type) {
     newDevice.innerHTML = `
         <img src="${getDeviceIcon(type)}" alt="${type}">
         <p>${name}</p>
-        <button class="control">Turn On</button>
+        <button class="control on">Turn On</button>
     `;
     deviceContainer.appendChild(newDevice);
 }

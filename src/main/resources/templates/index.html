@@ -34,7 +34,7 @@
                 <div class="device">
                     <img src="light-icon.png" alt="Light">
                     <p>Bedroom Light</p>
-                    <button class="control" id="bedroom-light">Turn Off</button>
+                    <button class="control" id="bedroom-light">Turn On</button>
                 </div>
             </div>
         </div>
@@ -54,13 +54,13 @@
         <h2>Add Options</h2>
         <div class="add-room">
             <h3>Add Room</h3>
-            <label for="room-name"></label><input type="text" id="room-name" placeholder="Room Name" required>
+            <label for="room-name">`</label><input type="text" id="room-name" placeholder="Enter Room Name" maxlength="20" required>
             <button class="add-button" id="add-room-button">Add Room</button>
         </div>
         <div class="add-device">
             <h3>Add Device</h3>
-            <label for="device-name"></label><input type="text" id="device-name" placeholder="Device Name" required>
-            <label for="device-type"></label><input type="text" id="device-type" placeholder="Device Type" required>
+            <label for="device-name"></label><input type="text" id="device-name" placeholder="Enter Device Name" maxlength="30" required>
+            <label for="device-type"></label><input type="text" id="device-type" placeholder="Enter Device Type" maxlength="20" required>
             <label for="room-select"></label><select id="room-select">
                 <option value="living-room">Living Room</option>
                 <option value="bedroom">Bedroom</option>
