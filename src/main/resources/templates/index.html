@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smartphone Automation System</title>
+    <title>Smart Home Automation</title>
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
 <header>
-    <h1>Smartphone Automation System</h1>
+    <h1>Welcome to Your Smart Home</h1>
 </header>
 <main>
-    <section id="device-dashboard">
-        <!-- Device cards will be added here -->
+    <section class="room">
+        <h2>Living Room</h2>
+        <div class="device">
+            <img src="/templates/light-icon.png" alt="Light">
+            <p>Light</p>
+            <button class="control">Turn On</button>
+        </div>
+        <div class="device">
+            <img src="/templates/thermostat-icon.png" alt="Thermostat">
+            <p>Thermostat</p>
+            <button class="control">Adjust</button>
+        </div>
     </section>
-    <section id="add-device">
-        <h2>Add a new device</h2>
-        <form id="device-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="tag">Tag:</label>
-            <input type="text" id="tag" name="tag">
-            <label for="description">Description:</label>
-            <textarea id="description" name="description"></textarea>
-            <button type="submit">Add</button>
-        </form>
+    <section class="room">
+        <h2>Bedroom</h2>
+        <div class="device">
+            <img src="light-icon.png" alt="Light">
+            <p>Light</p>
+            <button class="control">Turn Off</button>
+        </div>
     </section>
 </main>
-<script src="/static/js/script.js"></script>
 </body>
 </html>

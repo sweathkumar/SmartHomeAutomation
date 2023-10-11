@@ -1,84 +1,62 @@
-css
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #2196F3;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
-main {
-    padding: 2rem;
-}
-
-#device-dashboard {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.device-card {
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    padding: 1rem;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.device-card:hover {
-    transform: translateY(-10px);
-}
-
-.device-card h3 {
+h1 {
     margin: 0;
 }
 
-.device-card .delete-button {
-    background-color: #f44336;
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#add-device {
-    margin-top: 2rem;
-}
-
-#add-device form {
+main {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
 }
 
-#add-device form label,
-#add-device form input,
-#add-device form textarea,
-#add-device form button {
-    margin-bottom: 1rem;
-}
-
-#add-device form button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 20px;
+.room {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin: 1rem;
+    max-width: 300px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+}
+
+h2 {
+    color: #2196F3;
+}
+
+.device {
+    margin: 1rem 0;
+}
+
+img {
+    max-width: 60px;
+    height: auto;
+}
+
+p {
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.control {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
     border-radius: 5px;
+    cursor: pointer;
 }
