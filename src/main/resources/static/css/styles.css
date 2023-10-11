@@ -179,3 +179,50 @@ input[type="range"] {
     font-size: 20px;
     margin: 0.5rem 0;
 }
+/* Reset some default styles */
+/* ... (rest of the CSS remains the same) */
+
+.rooms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.room {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    margin: 1rem;
+    width: 300px;
+    text-align: center;
+}
+
+.room h3 {
+    color: #2196F3;
+    font-size: 20px;
+    margin: 0.5rem 0;
+}
+
+.add-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+}
+
+.add-room,
+.add-device {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+}
+
+.add-room h3,
+.add-device h3 {
+    color: #2196F3;
+    font-size: 20px;
+    margin: 0.5rem 0;
+}

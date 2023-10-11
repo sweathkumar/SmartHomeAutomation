@@ -99,4 +99,29 @@ function addNewDevice(roomId, name, type) {
     `;
     deviceContainer.appendChild(newDevice);
 }
+// ... (The existing JavaScript code remains the same)
+
+// Add functionality to toggle device buttons
+document.querySelectorAll('.control').forEach(button => {
+    button.addEventListener('click', function () {
+        const deviceName = this.previousElementSibling.textContent;
+        const newLabel = this.textContent === 'Turn On' ? 'Turn Off' : 'Turn On';
+        this.textContent = newLabel;
+        alert(`${deviceName} has been switched ${newLabel}`);
+    });
+});
+
+// ... (The existing JavaScript code remains the same)
+
+// Add functionality to add a new device
+document.getElementById('add-device-button').addEventListener('click', function () {
+    const deviceName = document.getElementById('device-name').value;
+    const deviceType = document.getElementById('device-type').value;
+    const selectedRoomId = document.getElementById('room-select').value;
+    // Add the new device to the UI and your system
+    addNewDevice(selectedRoomId, deviceName, deviceType);
+    alert(`Added new device: ${deviceName} - ${deviceType}`);
+});
+
+// ... (The existing JavaScript code remains the same)
 
