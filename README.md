@@ -3,7 +3,7 @@
 
 - 🔭 I’m currently working on [Smart Home Automation System](https://github.com/sweathkumar/SmartHomeAutomation)
 
-- 🌱 I’m currently learning **Framework and Javascript**
+- 🌱 I’m currently learning **Bootstrap and Javascript**
 
 - 💬 Ask me about **Java,HTML,CSS, and SQL**
 
